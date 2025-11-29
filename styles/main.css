@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
 }
 
 .background-glow {
@@ -158,15 +158,15 @@ body {
 
 .options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 18px;
 }
 
 .option-btn {
   border: none;
   border-radius: 22px;
-  padding: 18px;
-  font-size: 1.6rem;
+  padding: 16px 18px;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-bg);
   background: rgba(255, 255, 255, 0.9);
@@ -286,14 +286,33 @@ body {
 
 @media (max-width: 640px) {
   .game-shell {
-    padding: 20px;
+    padding: 16px 14px;
   }
 
   .options {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
   .value {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .problem-card {
+    padding: 20px 16px;
+  }
+
+  .problem-card .problem {
+    font-size: clamp(2.4rem, 10vw, 3.2rem);
+  }
+
+  .option-btn {
+    font-size: 1.3rem;
+    padding: 14px;
+  }
+
+  .primary-btn {
+    width: 100%;
+    max-width: 260px;
   }
 }

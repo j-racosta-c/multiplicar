@@ -150,12 +150,15 @@ function processIncorrect(button) {
 function handleTimeout() {
   if (!state.inRound) return;
   lockOptions();
+  state.inRound = false;
   state.streak = 0;
   updateStreak(state.streak);
   flashProblemResult('wrong');
-  setStatusMessage('¡Tiempo agotado!', 'error');
+  setStatusMessage('¡Tiempo agotado! Juego finalizado.', 'error');
   audio.playWrong();
-  loseLife();
+  state.lives = 0;
+  updateLives(state.lives);
+  endGame();
 }
 
 function advanceLevel() {
