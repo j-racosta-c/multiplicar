@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafío de Tablas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <p class="label">Nivel</p>
+          <p id="level-indicator" class="value">1</p>
+        </div>
+        <div>
+          <p class="label">Tiempo</p>
+          <p id="timer-display" class="value timer">30</p>
+        </div>
+        <div>
+          <p class="label">Vidas</p>
+          <div id="lives-container" class="lives"></div>
+        </div>
+        <div>
+          <p class="label">Racha</p>
+          <p id="streak-indicator" class="value">0</p>
+        </div>
+      </header>
+
+      <section class="play-area">
+        <div class="problem-card" id="problem-card">
+          <p class="title">¿Cuánto es?</p>
+          <p id="multiplication-display" class="problem">3 × 7</p>
+        </div>
+
+        <div class="options" id="options-grid" aria-live="polite"></div>
+
+        <div class="controls">
+          <button id="start-btn" class="primary-btn">Iniciar</button>
+          <p id="status-message" class="status-message" aria-live="assertive"></p>
+        </div>
+
+        <footer class="site-footer">
+          <p>Hecho por Raúl Acosta para su princesa Cristina &hearts;</p>
+        </footer>
+      </section>
+    </main>
+
+    <section id="game-over-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <h2>¡Game Over!</h2>
+        <p id="game-over-summary"></p>
+        <button id="restart-btn" class="primary-btn ghost">Jugar de nuevo</button>
+      </div>
+    </section>
+
+    <script type="module" src="scripts/game.js"></script>
+  </body>
+</html>
